@@ -1,11 +1,11 @@
 import React from 'react'
 
-function filterBlogPost() {
+function PostTopicsBlog() {
   return (
     <div>
-      <h1>The Filter Blog Post.</h1>
+      <h1>Topics</h1>
     </div>
   )
 }
 
-export default filterBlogPost
+export default PostTopicsBlog

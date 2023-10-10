@@ -1,11 +1,11 @@
 import React from 'react'
 import PostItem from './post-item';
 
-function PostList(props) {
+function PostGrid(props) {
     const { items } = props;
   return (
     <div>
-      <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-x-8 md:gap-y-3 divide-y-2'>
+      <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-x-8 md:gap-y-3'>
         {items.map(post => (
             <PostItem 
                 key={post.id}
@@ -15,6 +15,7 @@ function PostList(props) {
                 topics={post.topics}
                 image={post.image}
                 date={post.createdAt}
+                slug={post.slug}
             />
         ))}
       </ul>
@@ -22,4 +23,4 @@ function PostList(props) {
   )
 }
 
-export default PostList
+export default PostGrid
