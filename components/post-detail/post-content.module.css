@@ -1,0 +1,37 @@
+.container {
+  padding: 0;
+}
+
+.content {
+    width: 100%;
+    margin: var(--size-8) auto;
+    font-size: var(--size-5);
+    line-height: var(--size-8);
+    background-color: var(--color-grey-100);
+    border-radius: 6px;
+    padding: var(--size-4);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .container .image {
+    margin: var(--size-4) auto;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023) {
+    .container {
+      padding: 0 5rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .container {
+      padding: 0 9rem;
+    }
+  }
+  
