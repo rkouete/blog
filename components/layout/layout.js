@@ -1,11 +1,14 @@
-import React, { Fragment } from 'react'
-import MainHeader from './main-header'
+import MainHeader from './main-header';
+import classes from './layout.module.css';
+import { Fragment } from 'react';
+import MainFooter from './main-footer';
 
 function Layout(props) {
   return (
     <Fragment>
         <MainHeader />
-        <main className='my-20 px-3 sm:px-10'>{props.children}</main>
+        <main className={classes.layout}>{props.children}</main>
+        <MainFooter />
     </Fragment>
   )
 }

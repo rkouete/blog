@@ -1,0 +1,40 @@
+.body {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: rgb(83, 83, 83);
+}
+
+.date {
+    margin-top: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(184, 184, 184);
+}
+
+.topics {
+    color: #2b9db9;
+    font-weight: 800;
+    border-left: 2px solid #2b9db9;
+    padding-left: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+  }

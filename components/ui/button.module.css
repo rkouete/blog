@@ -1,0 +1,39 @@
+.btn {
+    display: flex;
+  flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    background-color: #2b9db9;
+    border: 1px solid #2b9db9;
+    border-radius: 5px;
+    color: #092329;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover,
+  .btn:active {
+    background-color: #02afa1;
+    border-color: #02afa1;
+  }
+
+.link {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: medium;
+    color: #02afa1;
+}
+
+.link span {
+    text-decoration: none;
+}
+
+.link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #02afa1;
+}
