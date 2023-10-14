@@ -1,9 +1,11 @@
 .layout {
-    padding: 2rem 2rem;
+  padding: 2rem 2rem;
+  background: rgb(13, 19, 20);
+  background: linear-gradient(60deg, rgba(13, 19, 20, 1) 0%, rgba(9, 25, 27, 1) 0%, rgba(13, 19, 20, 1) 100%);
 }
 
 @media screen and (min-width: 768px) {
-    .layout {
-      padding: 2rem 3rem;
-    }
+  .layout {
+    padding: 2rem 3rem;
   }
+}

@@ -1,0 +1,136 @@
+.contact {
+    margin: 2rem auto;
+    border-radius: 6px;
+    background-color: #09191b;
+    width: 90%;
+    max-width: 50rem;
+    padding: 1rem;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: white;
+  }
+  
+  .contact h1 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin: 1rem 0 ;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 95%;
+    border: 1px solid #f7f7f7;
+    background-color: #e7e7e7;
+  }
+
+  .form input:focus,
+  .form textarea:focus,
+  .form input:active,
+  .form textarea:active {
+    border: none;
+    
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form button {
+    font: inherit;
+    display: flex;
+    cursor: pointer;
+    background-color: #07d3e1;
+    border: 1px solid #07d3e1;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .form button:hover {
+    background-color: rgb(39, 97, 110);
+    border-color: rgb(39, 97, 110);
+  }
+  /* 
+  .form label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin: 1rem 0 ;
+  }
+  
+  .form input,
+  .form textarea {
+    font: inherit;
+    padding: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .control {
+    flex: 1;
+    min-width: 10rem;
+  }
+  
+  .actions {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  .form button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #06161a;
+    border: 1px solid #06161a;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form button:hover {
+    background-color: #15353d;
+    border-color: #15353d;
+  }
+  
+  @media (min-width: 768px) {
+    .contact h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  } */
+
+  @media (min-width: 768px) {
+    .contact h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  } 

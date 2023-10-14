@@ -6,7 +6,7 @@
     padding: .7rem 3rem;
     align-items: center;
     justify-content: space-between;
-    background-color: #06161a;
+    background-color: #0a0416;
   }
 
 
@@ -31,14 +31,14 @@
 .navItem {
     display: flex;
     gap: 10px;
-    color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
     font-size: larger;
 }
 
 .navItem:hover {
-    color: rgb(30, 110, 156);
+    color: #07d3e1;
 }
 
 @media screen and (min-width: 768px) {

@@ -5,6 +5,7 @@ topics: "Keylex"
 image: alcelaphus-buselaphus-caama.jpg
 excerpt: Mollit dolore ea incididunt sit anim. Dolore ipsum est sint et id qui pariatur irure pariatur eiusmod nostrud id cillum. Nulla reprehenderit sint qui ut veniam esse tempor.
 isFeatured: true
+tags: ['good', 'authentiks', 'cameroun', 'actuality', 'rentable']
 ---
 
 After watching [High Score](https://www.youtube.com/watch?v=B4jopG1wX88) on Netflix, I was suddenly inspired to develop a retro-style game. I think it was a combination of the aesthetics and nostalgia that motivated me.

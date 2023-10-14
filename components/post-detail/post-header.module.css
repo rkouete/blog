@@ -3,6 +3,9 @@
     justify-content: space-between;
     gap: 2rem;
     align-items: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #666666;
 }
 
 .image {
@@ -13,16 +16,17 @@
 }
 
 .title {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 0;
-    color: rgb(83, 83, 83);
+    color: rgb(238, 238, 238);
 }
 
 .date {
     margin-top: 0;
+    font-size: 12px;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
     color: rgb(184, 184, 184);
 }
 
