@@ -5,6 +5,7 @@ topics: "Domainer"
 image: platalea-leucordia.jpg
 excerpt: Mollit dolore ea incididunt sit anim. Dolore ipsum est sint et id qui pariatur irure pariatur eiusmod nostrud id cillum. Nulla reprehenderit sint qui ut veniam esse tempor.
 isFeatured: false
+tags: ['cameroun', 'actuality', 'congratulation']
 ---
 
 The [SaaS (software as a service)](https://en.wikipedia.org/wiki/Software_as_a_service) model underpins many of today's successful new businesses. Knowing how to build one from start to finish is probably a useful addition to any software developer's skill set.

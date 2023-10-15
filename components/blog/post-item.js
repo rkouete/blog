@@ -17,13 +17,13 @@ function PostItem(props) {
       }); */
 
       const showTopicHandle = () => {
-        router.push(`/blog/topics/${slug}`)
+        router.push(`/blog/topics/${topics}`)
       }
 
   return (
     <li className={classes.item}>
         <Button onClick={showTopicHandle}>{topics}</Button>
-        <h2 className={classes.title}>{title}</h2>
+        <h2><Link className={classes.title} href={`/blog/${slug}`}>{title}</Link></h2>
         <p className={classes.content}>{excerpt.substr(0, 100)+`...`}</p>
         <div className={classes.footer}>
             <Button link={`/blog/${slug}`}>

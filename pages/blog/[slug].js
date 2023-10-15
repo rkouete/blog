@@ -1,5 +1,6 @@
 import { getPostData, getPostFiles } from '../../lib/post-utils';
 import PostContent from '../../components/post-detail/post-content';
+import PostTags from '../../components/post-detail/post-tags';
 
 function postDetails(props) {
   const { post } = props;

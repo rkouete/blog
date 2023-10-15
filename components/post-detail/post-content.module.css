@@ -1,5 +1,8 @@
 .container {
-  padding: 0;
+  padding: 2rem 1rem;
+  background-color: #09191b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .content {
@@ -15,6 +18,7 @@
     flex-direction: column;
     justify-content: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(224, 224, 224);
   }
 
   .container .image {
@@ -25,13 +29,15 @@
 
   @media screen and (min-width: 768px) and (max-width: 1023) {
     .container {
-      padding: 0 5rem;
+      padding: 2rem 1rem;
+      margin: 0 4rem;
     }
   }
 
   @media only screen and (min-width: 1024px) {
     .container {
-      padding: 0 9rem;
+      padding: 2rem 2rem;
+      margin: 0 9rem;
     }
   }
   

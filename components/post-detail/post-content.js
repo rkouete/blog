@@ -5,6 +5,7 @@ import classes from './post-content.module.css';
 import Image from 'next/image';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import PostTags from './post-tags';
 
 function PostContent(props) {
   const { post } = props;
@@ -53,6 +54,7 @@ function PostContent(props) {
     <div className={classes.container}>
       <PostHeader title={post.title} topics={post.topics} date={post.date} image={imagePath} />
       <ReactMarkdown components={customRenderers} className={classes.content}>{post.content}</ReactMarkdown>
+      <PostTags tags={post.tags}/>
     </div>
   )
 }
