@@ -1,34 +1,43 @@
 .btn {
-    display: flex;
+  display: flex;
   flex-direction: column;
-    text-decoration: none;
-    cursor: pointer;
-    font: inherit;
-    background-color: #09191b;
-    border: 1px solid #09191b;
-    border-radius: 3px;
-    color: #07d3e1;
-    font-weight: 700;
-    padding: 0.4rem 1rem;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-.link {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: medium;
-    color: #07d3e1;
-    font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  background-color: #09191b;
+  border: 1px solid #09191b;
+  border-radius: 3px;
+  color: #07d3e1;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
-.link span {
-    text-decoration: none;
+.link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: medium;
+  color: #07d3e1;
+  font-weight: 600;
+  text-decoration: none;
+  max-width: max-content;
 }
 
 .link svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #07d3e1;
+  opacity: 0;
+  padding-left: 0px;
+  transition: 0.4s;
+  display: inline-block;
+  position: relative;
+  width: 1.9rem;
+  height: 1.9rem;
+  color: #07d3e1;
+}
+
+.link:hover svg {
+  padding-left: 10px;
+  opacity: 1;
+  font-weight: 600;
 }

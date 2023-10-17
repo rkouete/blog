@@ -16,6 +16,7 @@ function PostGrid(props) {
                 image={post.image}
                 date={post.date}
                 slug={post.slug}
+                tags={post.tags}
             />
         ))}
       </ul>
