@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Button from "../ui/button";
 import { useRouter } from "next/router";
 import ArrowIcon from "../icon/arrow-right-icon";
@@ -7,21 +6,22 @@ import classes from './post-item.module.css';
 import CalendarIcon from "../icon/calendar-icon";
 
 function PostItem(props) {
-    const { id, title, excerpt, topics, image, date, slug } = props;
-    const router = useRouter()
+  const { id, title, excerpt, topics, tags, image, date, slug } = props;
 
-    /* const humainReadableDate = new Date(date).toLocaleDateString('en-US', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-      }); */
+  console.log(tags)
+  const router = useRouter()
 
-      const showTopicHandle = () => {
-        router.push(`/blog/topics/${topics}`)
-      }
+  /* const humainReadableDate = new Date(date).toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }); */
 
-  return (
-    <li className={classes.item}>
+  const showTopicHandle = () => {
+    router.push(`/blog/topics/${topics}`)
+  }
+
+  {/* <li className={classes.item}>
         <Button onClick={showTopicHandle}>{topics}</Button>
         <h2><Link className={classes.title} href={`/blog/${slug}`}>{title}</Link></h2>
         <p className={classes.content}>{excerpt.substr(0, 100)+`...`}</p>
@@ -32,6 +32,25 @@ function PostItem(props) {
             </Button>
             <time className={classes.date}><CalendarIcon/> {date}</time>
         </div>
+    </li> */}
+
+  return (
+    <li className={classes.item}>
+      <div className={classes.itemIn}>
+        <h3 className={classes.title}>{title}</h3>
+        <div className={classes.separator}></div>
+        <div className={classes.tags}>
+          {tags.slice(0, 3).map((tag) => (<span className={classes.tag}>{tag}</span>))}
+        </div>
+        <p>{excerpt.substr(0, 100)+`...`}</p>
+        <div className={classes.footer}>
+          <Button link={`/blog/${slug}`}>
+            <span>Learn More</span>
+            <ArrowIcon />
+          </Button>
+          <time className={classes.date}><CalendarIcon /> {date}</time>
+        </div>
+      </div>
     </li>
   )
 }

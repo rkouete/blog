@@ -8,7 +8,7 @@ function PostTags(props) {
     let items = [];
 
     tags.map(item => {
-        items.push(<Link href={`/blog/tags/${item}`} className={classes.item}>{item}</Link>)
+        items.push(<span className={classes.tag}>{item}</span>)
     })
     
     return (
