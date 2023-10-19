@@ -8,7 +8,6 @@ import CalendarIcon from "../icon/calendar-icon";
 function PostItem(props) {
   const { id, title, excerpt, topics, tags, image, date, slug } = props;
 
-  console.log(tags)
   const router = useRouter()
 
   /* const humainReadableDate = new Date(date).toLocaleDateString('en-US', {
@@ -39,10 +38,10 @@ function PostItem(props) {
       <div className={classes.itemIn}>
         <h3 className={classes.title}>{title}</h3>
         <div className={classes.separator}></div>
-        <div className={classes.tags}>
-          {tags.slice(0, 3).map((tag) => (<span className={classes.tag}>{tag}</span>))}
-        </div>
         <p>{excerpt.substr(0, 100)+`...`}</p>
+        <div className={classes.tags}>
+          {tags.slice(0, 3).map((tag, i) => (<span key={i} className={classes.tag}>{tag}</span>))}
+        </div>
         <div className={classes.footer}>
           <Button link={`/blog/${slug}`}>
             <span>Learn More</span>

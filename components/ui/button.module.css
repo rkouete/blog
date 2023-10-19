@@ -19,8 +19,7 @@
   gap: 0.5rem;
   align-items: center;
   font-size: medium;
-  color: #07d3e1;
-  font-weight: 600;
+  color: #666666;
   text-decoration: none;
   max-width: max-content;
 }
@@ -33,11 +32,10 @@
   position: relative;
   width: 1.9rem;
   height: 1.9rem;
-  color: #07d3e1;
+  color: #666666;
 }
 
 .link:hover svg {
   padding-left: 10px;
   opacity: 1;
-  font-weight: 600;
 }
