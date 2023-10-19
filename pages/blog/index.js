@@ -1,13 +1,20 @@
+import { Fragment } from "react";
 import PostGrid from "../../components/blog/post-grid";
 import PostHead from "../../components/blog/post-head";
 import { getAllPosts } from "../../lib/post-utils";
 
+import Head from "next/head";
+
 function blogPage(props) {
   return (
-    <div className="p-4 md:p-10">
+    <Fragment>
+      <Head>
+        <title>All Posts</title>
+        <meta name='description' content='A list of all programming-related tutorials.' />
+      </Head>
       <PostHead />
       <PostGrid items={props.posts}/>
-    </div>
+    </Fragment>
   )
 }
 

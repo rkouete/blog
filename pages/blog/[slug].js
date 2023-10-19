@@ -1,14 +1,23 @@
 import { getPostData, getPostFiles } from '../../lib/post-utils';
 import PostContent from '../../components/post-detail/post-content';
 import PostTags from '../../components/post-detail/post-tags';
+import { Fragment } from 'react';
+
+import Head from 'next/head';
 
 function postDetails(props) {
   const { post } = props;
 
   return (
-    <article>
+    <Fragment>
+      <Head>
+        <title>{post.title}</title>
+        <meta name='description' content={post.excerpt} />
+      </Head>
+      <article>
         <PostContent post={post}/>
     </article>
+    </Fragment>
   )
 }
 

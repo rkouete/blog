@@ -7,16 +7,10 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import PostTags from './post-tags';
 
-function PostContent(props) {
-  const { post } = props;
-  const imagePath = `/images/posts/${post.slug}/${post.image}`;
-
-  const customRenderers = {
-
-    paragraph(paragraph) {
+/* paragraph(paragraph) {
       const { node } = paragraph;
 
-      if (node.children[0].type === 'image') {
+      if (node.children[0].tagName === "img") {
         const image = node.children[0];
         return (
           <div className={classes.image}>
@@ -31,6 +25,26 @@ function PostContent(props) {
       }
 
       return <p>{paragraph.children}</p>
+    } */
+
+function PostContent(props) {
+  const { post } = props;
+  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+
+  const customRenderers = {
+    img(image) {
+        return (
+          <span className={classes.image}>
+            <Image
+              src={`/images/posts/${post.slug}/${image.src}`}
+              alt={image.alt}
+              width={0}
+              height={0}
+              layout='responsive'
+              priority
+            />
+          </span>
+        );
     },
     code({ node, inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || '')
@@ -54,7 +68,7 @@ function PostContent(props) {
     <div className={classes.container}>
       <PostHeader title={post.title} topics={post.topics} date={post.date} image={imagePath} />
       <ReactMarkdown components={customRenderers} className={classes.content}>{post.content}</ReactMarkdown>
-      <PostTags tags={post.tags}/>
+      <PostTags tags={post.tags} />
     </div>
   )
 }

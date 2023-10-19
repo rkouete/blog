@@ -10,7 +10,9 @@
 }
 
 .tags {
-    display: flex;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
     gap: .5rem;
 }
 

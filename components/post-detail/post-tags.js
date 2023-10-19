@@ -7,8 +7,8 @@ function PostTags(props) {
 
     let items = [];
 
-    tags.map(item => {
-        items.push(<span className={classes.tag}>{item}</span>)
+    tags.map((item, i) => {
+        items.push(<span key={i} className={classes.tag}>{item}</span>)
     })
     
     return (

@@ -4,7 +4,7 @@ import classes from './post-header.module.css';
 function PostHeader(props) {
   return (
     <div>
-      <Image className={classes.image} src={props.image} alt={props.title} width={900} height={500}/>
+      <Image className={classes.image} src={props.image} alt={props.title} width={900} height={500} layout='responsive' priority/>
       <div className={classes.body}>
         <div>
           <h4 className={classes.title}>{props.title}</h4>
