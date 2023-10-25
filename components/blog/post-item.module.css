@@ -1,11 +1,11 @@
-.title {
+.darkItem .title {
     text-decoration: none;
     color: #f8f8f8;
     margin: 1rem 0 10px 0;
     font-size: 1.5rem;
 }
 
-.item {
+.darkItem {
     position: relative;
     margin-bottom: 30px;
     min-height: 1px;
@@ -18,11 +18,24 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.item:hover {
+.lightItem {
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 1px;
+    float: left;
+    padding-bottom: 1.7rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #08656b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.darkItem:hover {
     border: none;
 }
 
-.item::before {
+.darkItem::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -33,25 +46,46 @@
   transition: width 0.4s;
 }
 
-.item:hover:before {
+.lightItem::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 0%;
+  background: #161616;
+  right: 0px;
+  transition: width 0.4s;
+}
+
+.darkItem:hover:before,
+.lightItem:hover::before {
     width: 100%;
   }
 
-.separator {
+.darkItem .separator,
+.lightItem .separator {
     margin-bottom: 30px;
     width: 35px;
     height: 3px;
-    background: #ffffff;
     border: none;
 }
 
-.tags {
+.darkItem .separator {
+    background: #ffffff;
+}
+
+.lightItem .separator {
+    background: #a5a5a5;
+}
+
+.darkItem .tags,
+.lightItem .tags {
     display: flex;
     gap: .5rem;
     margin-bottom: 1rem;
 }
 
-.tag {
+.darkItem .tag {
     background-color: #07d3e1;
     opacity: .8;
     padding: .4rem .8rem;
@@ -59,6 +93,16 @@
     font-size: 12px;
     font-weight: 500;
     color: white;
+}
+
+.lightItem .tag {
+    background-color: #c5c5c5;
+    opacity: .8;
+    padding: .4rem .8rem;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(26, 25, 25);
 }
 
 .date {
@@ -70,7 +114,7 @@
     color: #666666;
 }
 
-.item p {
+.darkItem p {
     font-size: 13px;
     color: #fffefe;
     margin: 2rem 0;

@@ -1,25 +1,23 @@
 .tagSection {
-    border-top: 2px solid #afafaf;
-    padding-top: 2rem 0;
-    margin-top: 3rem 0;
+    position:relative;
 }
 
 .title {
-    color: white;
-    margin: 2rem 0;
+    color: rgb(168, 168, 168);
+    margin: .5rem 0;
 }
 
 .tags {
     display: grid;
     text-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
     gap: .5rem;
 }
 
 .tag {
-    background-color: #07d3e1;
+    background-color: rgb(13, 19, 20);
     opacity: .8;
-    padding: .4rem .8rem;
+    padding: .4rem .3rem;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 700;
@@ -29,6 +27,17 @@
 
 .tag:hover {
     background-color: #09191b;
-    border: 1px solid #07d3e1;
+    border: 1px solid #08656b;
     color: white;
 }
+
+@media screen and (min-width: 1024px) {
+
+    .tagSection {
+        padding-top: 2rem 0;
+        margin-top: 3rem 0;
+        position: absolute;
+        top: 0;
+        left: 7rem;
+    }
+  }

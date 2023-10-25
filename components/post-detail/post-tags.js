@@ -13,7 +13,7 @@ function PostTags(props) {
     
     return (
         <section className={classes.tagSection}>
-            <h2 className={classes.title}>Tags</h2>
+            <h4 className={classes.title}>Tags</h4>
             <div className={classes.tags}>
             {items}
         </div>

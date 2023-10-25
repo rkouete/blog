@@ -2,6 +2,7 @@ import { getPostData, getPostFiles } from '../../lib/post-utils';
 import PostContent from '../../components/post-detail/post-content';
 import PostTags from '../../components/post-detail/post-tags';
 import { Fragment } from 'react';
+import Comments from '../../components/input/comments';
 
 import Head from 'next/head';
 
@@ -16,7 +17,9 @@ function postDetails(props) {
       </Head>
       <article>
         <PostContent post={post}/>
-    </article>
+      </article>
+      
+      <Comments/>
     </Fragment>
   )
 }
