@@ -1,24 +1,33 @@
-.container {
+.darkContainer {
   padding: 2rem 1rem;
   background-color: #09191b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.lightContainer {
+  padding: 2rem 1rem;
+  background-color: #fcfcfc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
 .content {
     width: 100%;
-    margin: var(--size-8) auto;
-    font-size: var(--size-5);
-    line-height: var(--size-8);
-    background-color: var(--color-grey-100);
     border-radius: 6px;
-    padding: var(--size-4);
     text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(224, 224, 224);
+    color: rgb(26, 26, 26);
+  }
+
+  .darkContainer .content {
+    color: rgb(255, 255, 255);
+  }
+
+  .lightContainer .content {
+    color: rgb(29, 29, 29);
   }
 
   .content .image {
@@ -26,16 +35,9 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023) {
-    .container {
-      padding: 2rem 1rem;
+    .darkContainer,
+    .lightContainer {
       margin: 0 4rem;
-    }
-  }
-
-  @media only screen and (min-width: 1024px) {
-    .container {
-      padding: 2rem 2rem;
-      margin: 0 9rem;
     }
   }
   

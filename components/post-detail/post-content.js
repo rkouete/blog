@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import PostHeader from './post-header';
 import ReactMarkdown from 'react-markdown';
 import classes from './post-content.module.css';
 import Image from 'next/image';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import ThemeContext from '../../store/theme-context';
 import PostTags from './post-tags';
+import Comments from '../input/comments';
 
 /* paragraph(paragraph) {
       const { node } = paragraph;
@@ -28,6 +30,7 @@ import PostTags from './post-tags';
     } */
 
 function PostContent(props) {
+  const themeCtx = useContext(ThemeContext);
   const { post } = props;
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
@@ -65,10 +68,9 @@ function PostContent(props) {
   }
 
   return (
-    <div className={classes.container}>
-      <PostHeader title={post.title} topics={post.topics} date={post.date} image={imagePath} />
+    <div className={themeCtx.theme === 'DARK' ? classes.darkContainer : classes.lightContainer}>
+      <PostHeader title={post.title} tags={post.tags} topics={post.topics} date={post.date} image={imagePath} />
       <ReactMarkdown components={customRenderers} className={classes.content}>{post.content}</ReactMarkdown>
-      <PostTags tags={post.tags} />
     </div>
   )
 }

@@ -1,11 +1,16 @@
-.body {
-    display: flex;
-    justify-content: space-between;
+.darkBody,
+.lightBody {
     gap: 2rem;
     align-items: center;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #666666;
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .image {
@@ -19,7 +24,14 @@
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 0;
-    color: rgb(238, 238, 238);
+}
+
+.lightBody .title {
+    color: rgb(27, 27, 27);
+}
+
+.darkBody .title {
+    color: rgb(255, 255, 255);
 }
 
 .date {
@@ -39,6 +51,10 @@
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 20px;
+        font-size: 16px;
+    }
+    .topics {
+        font-weight: 600;
+        font-size: 15px;
     }
   }
