@@ -7,7 +7,7 @@
 
 .darkItem {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     min-height: 1px;
     float: left;
     padding-bottom: 1.7rem;
@@ -20,7 +20,7 @@
 
 .lightItem {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     min-height: 1px;
     float: left;
     padding-bottom: 1.7rem;

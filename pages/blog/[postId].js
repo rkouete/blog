@@ -26,8 +26,8 @@ function postDetails(props) {
 
 export function getStaticProps(context) {
   const { params } = context;
-  const { slug } = params;
-  const postData = getPostData(slug);
+  const { postId } = params;
+  const postData = getPostData(postId);
 
   return {
     props: {
@@ -40,10 +40,10 @@ export function getStaticProps(context) {
 export function getStaticPaths() {
   const postFilenames = getPostFiles();
 
-  const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ''))
+  const postId = postFilenames.map((fileName) => fileName.replace(/\.md$/, ''))
 
   return {
-    paths: slugs.map(slug => ({ params: { slug: slug }})),
+    paths: postId.map(id => ({ params: { postId: id }})),
     fallback: false
   };
 }
