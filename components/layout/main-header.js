@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import React, { Fragment, useContext } from 'react'
-import HomeIcon from '../icon/home-icon'
-import BlogIcon from '../icon/blog-icon'
 import classes from './main-header.module.css';
 import ThemeContext from '../../store/theme-context';
 import MoonIcon from '../icon/moon-icon';
@@ -14,7 +12,7 @@ function MainHeader() {
 
     return (
         <Fragment>
-            <header className={classes.header}>
+            <header className={themCtx.theme === 'DARK' ? classes.darkHeader : classes.lightHeader}>
                 <h1><Link className={classes.logo} href='/'>Tech Articles</Link></h1>
                 <nav className={classes.nav}>
                     <ul className={classes.navItems}>

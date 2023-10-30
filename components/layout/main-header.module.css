@@ -1,4 +1,14 @@
-.header {
+.lightHeader {
+    display: flex;
+    padding: .7rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .darkHeader {
     display: flex;
     left: 0;
     right: 0;
@@ -6,9 +16,18 @@
     align-items: center;
     justify-content: space-between;
     background-color: #0a0416;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.699);
   }
 
-  .header svg {
+  .lightHeader svg {
+    display: flex;
+    color: rgb(58, 58, 58);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .darkHeader svg {
     display: flex;
     color: white;
     width: 25px;
@@ -16,16 +35,18 @@
     cursor: pointer;
   }
 
+  .darkHeader .logo {
+    color: rgb(255, 255, 255);
+  }
+
+  .lightHeader .logo {
+    color: rgb(58, 58, 58);
+  }
 
 .logo {
     font-size: 22px;
     font-weight: 700;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.nav {
-    position: relative;
 }
 
 .navItems {
@@ -35,10 +56,16 @@
     list-style: none;
 }
 
+.darkHeader .navItem {
+    color: rgb(255, 255, 255);
+}
+.lightHeader .navItem {
+    color: rgb(58, 58, 58);
+}
+
 .navItem {
     display: flex;
     gap: 10px;
-    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
     font-size: larger;
@@ -49,7 +76,8 @@
 }
 
 @media screen and (min-width: 768px) {
-    .header {
+    .darkHeader,
+    .lightHeader {
         flex-direction: row;
         padding: .7rem 5rem;
         justify-content: space-between;
@@ -65,7 +93,8 @@
   }
 
   @media only screen and (min-width: 1024px) {
-    .header {
+    .darkHeader,
+    .lightHeader {
         padding: .7rem 13rem;
     }
   }

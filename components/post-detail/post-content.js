@@ -71,6 +71,7 @@ function PostContent(props) {
     <div className={themeCtx.theme === 'DARK' ? classes.darkContainer : classes.lightContainer}>
       <PostHeader title={post.title} tags={post.tags} topics={post.topics} date={post.date} image={imagePath} />
       <ReactMarkdown components={customRenderers} className={classes.content}>{post.content}</ReactMarkdown>
+      <PostTags tags={post.tags}/>
     </div>
   )
 }
