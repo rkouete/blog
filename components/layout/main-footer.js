@@ -2,15 +2,23 @@ import { useContext } from 'react';
 import classes from './main-footer.module.css';
 import { useRef } from 'react';
 import ThemeContext from '../../store/theme-context';
+import NotificationContext from '../../store/notification-context';
 
 function MainFooter() {
   const emailInputRef = useRef();
   const themeCtx = useContext(ThemeContext);
+  const notificationCtx = useContext(NotificationContext);
 
   const registrationHandle = (e) => {
     e.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
+
+    notificationCtx.showNotification({
+      title: 'Please wait !',
+      message: 'The action is loading.',
+      status: 'pending'
+    });
 
     fetch('/api/newsletter', {
       method: 'POST',
@@ -20,6 +28,11 @@ function MainFooter() {
       }
     }).then((response) => {
       console.log(response.message)
+      notificationCtx.showNotification({
+        title: 'Success !',
+        message: 'The Email address send successfully.',
+        status: 'success'
+      });
     })
   }
 

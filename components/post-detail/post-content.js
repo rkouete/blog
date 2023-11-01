@@ -8,6 +8,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import ThemeContext from '../../store/theme-context';
 import PostTags from './post-tags';
 import Comments from '../input/comments';
+import CodeCopyBtn from '../ui/code-copy-btn';
 
 /* paragraph(paragraph) {
       const { node } = paragraph;
@@ -33,6 +34,11 @@ function PostContent(props) {
   const themeCtx = useContext(ThemeContext);
   const { post } = props;
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
+
+  const Pre = ({ children }) => <pre className={classes.blogPre}>
+        <CodeCopyBtn>{children}</CodeCopyBtn>
+        {children}
+    </pre>
 
   const customRenderers = {
     img(image) {
@@ -64,7 +70,8 @@ function PostContent(props) {
           {children}
         </code>
       )
-    }
+    },
+    pre: Pre
   }
 
   return (

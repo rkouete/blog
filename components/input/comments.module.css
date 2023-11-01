@@ -1,8 +1,8 @@
 #disqus_thread {
   padding:12px;
-  margin-bottom: 4rem;
-  }
-  #disqus_thread h4 {
+  margin: 5rem 0;
+}
+/*   #disqus_thread h4 {
   color:#ffffff;
   font-family: Helvetica, sans-serif;
   font-size:12px;
@@ -58,4 +58,4 @@
   #dsq-new-post div.dsq-request-user-info {
   background:none;
   padding-bottom:0px;
-  }
+  } */

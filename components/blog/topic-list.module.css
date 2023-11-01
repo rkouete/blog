@@ -12,6 +12,7 @@
 .lightItems .item {
     background-color: rgb(255, 255, 255);
     border: 1px solid #e4e4e4;
+    color: #08656b;
 }
 
 .darkItems .item {
@@ -28,7 +29,7 @@
 }
 
 .lightItems .item.active {
-    background-color: rgb(219, 219, 219);
+    background-color: #07d3e1;
     transform: scale(1.1);
 }
 
@@ -43,7 +44,8 @@
 }
 
 .lightItems .item:hover {
-    background-color: rgb(219, 219, 219);
+    background-color: #07d3e1;
+    color: white;
 }
 
 .darkItems .item:hover {

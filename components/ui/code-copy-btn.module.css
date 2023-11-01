@@ -1,0 +1,26 @@
+.codeCopyBtn {
+    color: rgb(226, 226, 226);
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 25px;
+    height: 25px;
+}
+.codeCopyBtn:hover {
+    opacity: 0.9;
+}
+
+.codeCopyBtnOk {
+    color: #08656b !important;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 25px;
+    height: 25px;
+}
