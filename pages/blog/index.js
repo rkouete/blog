@@ -11,7 +11,7 @@ function blogPage(props) {
   const router = useRouter();
   const findTopicHandle = (e, topic) => {
     e.preventDefault();
-    const topicPath = `/topic/${topic}`;
+    const topicPath = `/blog/topic/${topic}`;
     router.push(topicPath)
   }
   return (
