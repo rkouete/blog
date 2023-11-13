@@ -1,7 +1,9 @@
 import classes from './post-tags.module.css';
-import Link from 'next/link';
+import ThemeContext from '../../store/theme-context';
+import { useContext } from 'react';
 
 function PostTags(props) {
+    const themeCtx = useContext(ThemeContext);
   
     const { tags } =props;
 
@@ -12,8 +14,7 @@ function PostTags(props) {
     })
     
     return (
-        <section className={classes.tagSection}>
-            <h4 className={classes.title}>Tags</h4>
+        <section className={themeCtx.theme === 'DARK' ? classes.darkTagSection : classes.lightTagSection}>
             <div className={classes.tags}>
             {items}
         </div>

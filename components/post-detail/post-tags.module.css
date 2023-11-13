@@ -1,11 +1,7 @@
-.tagSection {
+.darkTagSection,
+.lightTagSection {
     position:relative;
     margin: 2rem 0 0 0;
-}
-
-.title {
-    color: rgb(168, 168, 168);
-    margin: .5rem 0;
 }
 
 .tags {
@@ -15,12 +11,23 @@
     gap: .5rem;
 }
 
-.tag {
+.darkTagSection .tag {
     background-color: rgb(20, 33, 36);
+    color: white;
+    border: 1px solid #07adb9;
+}
+
+.lightTagSection .tag {
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 50, 54);
+    border: 1px solid #07adb9;
+}
+
+.tag {
+
     opacity: .8;
     padding: .4rem .3rem;
     border-radius: 15px;
     font-size: 12px;
     font-weight: 700;
-    color: white;
 }
