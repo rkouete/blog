@@ -17,7 +17,7 @@ function MainHeader() {
                 <nav className={classes.nav}>
                     <ul className={classes.navItems}>
                         <li>
-                            <Link href="/" className={classes.navItem}>
+                            <Link href="https://rodriguekouete.com/" className={classes.navItem}>
                                 <span>Home</span>
                             </Link>
                         </li>
