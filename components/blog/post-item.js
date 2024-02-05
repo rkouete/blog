@@ -46,7 +46,7 @@ function PostItem(props) {
           {tags.slice(0, 3).map((tag, i) => (<span key={i} className={classes.tag}>{tag}</span>))}
         </div>
         <div className={classes.footer}>
-          <Button link={`/blog/${slug}`}>
+          <Button link={`/${slug}`}>
             <span>Learn More</span>
             <ArrowIcon />
           </Button>

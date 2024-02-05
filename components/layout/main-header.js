@@ -22,7 +22,7 @@ function MainHeader() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/blog" className={classes.navItem}>
+                            <Link href="/" className={classes.navItem}>
                                 <span>Blog</span>
                             </Link>
                         </li>

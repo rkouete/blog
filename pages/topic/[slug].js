@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router';
-import { getAllPosts, getTopicPosts } from '../../lib/post-utils';
+import { getAllPosts, getTopicPosts, getAllTopics } from '../../lib/post-utils';
 import TopicList from '../../components/blog/topic-list';
 import PostGrid from '../../components/blog/post-grid';
 import { Fragment } from 'react';
@@ -23,7 +23,7 @@ function PostsCategory(props) {
                 <meta name='description' content='A list of all programming-related tutorials by topics.' />
             </Head>
             <PostHead />
-            <TopicList active={router.query.slug} onSearch={findTopicHandle} />
+            <TopicList active={router.query.slug} onSearch={findTopicHandle} topics={props.topics}/>
             <PostGrid items={props.posts} />
         </Fragment>
     )
@@ -32,12 +32,14 @@ function PostsCategory(props) {
 export function getStaticProps(context) {
     const { params } = context;
     const { slug } = params;
+    const allTopics = getAllTopics();
 
     const topicPosts = getTopicPosts(slug);
 
     return {
         props: {
-            posts: topicPosts
+            posts: topicPosts,
+            topics: allTopics
         },
     }
 }
