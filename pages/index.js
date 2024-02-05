@@ -1,22 +1,43 @@
-import Head from 'next/head';
-import { Fragment } from 'react';
-import NotificationContext from '../store/notification-context';
-import Notification from '../components/ui/notification';
-import { useContext } from 'react';
+import { Fragment } from "react";
+import PostGrid from "../components/blog/post-grid";
+import PostHead from "../components/blog/post-head";
+import { getAllPosts, getAllTopics } from "../lib/post-utils";
 
-export default function Home() {
-  const notificationCtx = useContext(NotificationContext);
+import Head from "next/head";
+import TopicList from "../components/blog/topic-list";
+import { useRouter } from "next/router";
 
-  const activeNotification = notificationCtx.notification
-
+function blogPage(props) {
+  const router = useRouter();
+  const findTopicHandle = (e, topic) => {
+    e.preventDefault();
+    const topicPath = `/topic/${topic}`;
+    router.push(topicPath)
+  }
   return (
     <Fragment>
       <Head>
-        <title>KOUETE's Blog</title>
-        <meta name='description' content='I post about programming and web development.'/>
+        <title>All Posts</title>
+        <meta name='description' content='A list of all programming-related tutorials.' />
       </Head>
-      <h1>Home Page</h1>
-      { activeNotification && <Notification title={activeNotification.title} message={activeNotification.message} status={activeNotification.status}/> }
+      <PostHead />
+      <TopicList onSearch={findTopicHandle} topics={props.topics}/>
+      <PostGrid items={props.posts}/>
     </Fragment>
-  );
+  )
 }
+
+export function getStaticProps() {
+  const allPosts = getAllPosts();
+  const allTopics = getAllTopics();
+
+  return {
+    props: {
+      posts: allPosts,
+      topics: allTopics
+    },
+  }
+}
+
+export default blogPage
+

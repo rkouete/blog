@@ -1,11 +1,11 @@
 ---
-title: "Acrantophis madagascariensis"
-date: "2021-08-27"
-topics: "java"
+title: "Install Camunda 8 on Kubernetes cluster"
+date: "2024-01-20"
+topics: "Camunda"
 image: acrantophis-madagascariensis.jpg
-excerpt: Mollit dolore ea incididunt sit anim. Dolore ipsum est sint et id qui pariatur irure pariatur eiusmod nostrud id cillum. Nulla reprehenderit sint qui ut veniam esse tempor.
+excerpt: Deploy Camunda 8 Self-Managed on K8s cluster using official Helm Charts
 isFeatured: true
-tags: ['thanks', 'world', 'waouhh']
+tags: ['Camunda', 'Camunda 8', 'Deployment']
 ---
 
 I was recently granted access to the [OpenAI GPT-3 Beta](https://beta.openai.com/), a very powerful language model that can be used to do all sorts of magic like chat bot generation, article summary, and a [lot more cool stuff](https://beta.openai.com/examples).
