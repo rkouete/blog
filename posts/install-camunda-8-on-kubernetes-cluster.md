@@ -18,7 +18,7 @@ Camunda 8 consist of a set of components:
 - **Tasklist** : it's a component used for managing user tasks (that requires humain intervention).
 - **Operate** : Operate component that allow developers and operators to track the progress of process instance, troubleshoot issues and optimize performance.
 - **Optimize** : used for improving processes by identifying constraints in the system.
-- **Web modeler** : It's a tool usedd for process modeling (available only for enterprise customer). We will use his Desktop version (**Desktop modeler**) available at https://camunda.com/download/modeler/ 
+- **Web modeler** : It's a tool used for process modeling (available only for enterprise customer). We will use his Desktop version (**Desktop modeler**) available at https://camunda.com/download/modeler/ 
 
 In this article, we will discuss how to setup a development environment for Camunda 8 using the official helm charts. 
 
