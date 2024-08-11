@@ -18,15 +18,15 @@ Camunda 8 consist of a set of components:
 - **Tasklist** : it's a component used for managing user tasks (that requires humain intervention).
 - **Operate** : Operate component that allow developers and operators to track the progress of process instance, troubleshoot issues and optimize performance.
 - **Optimize** : used for improving processes by identifying constraints in the system.
-- **Web modeler** : It's a tool used for process modeling (available only for enterprise customer). We will use his Desktop version (**Desktop modeler**) available at https://camunda.com/download/modeler/ 
+- **Web modeler** : It's a tool used for process modeling (available only for enterprise customer). We will use his Desktop version (**Desktop modeler**) available at [https://camunda.com/download/modeler/](https://camunda.com/download/modeler/)
 
 In this article, we will discuss how to setup a development environment for Camunda 8 using the official helm charts. 
 
 ## Prerequisites
 
 - Kubernetes basics
-- Setup a Kubernetes (k8s) cluster on your local machine. Yo can install **Docker desktop** (https://www.docker.com/products/docker-desktop/) on your system, then activate Kubernetes cluster (a docker desktop feature)
-- Helm. Visit https://helm.sh/docs/intro/install/ and follow the installation instructions.
+- Setup a Kubernetes (k8s) cluster on your local machine. Yo can install **Docker desktop** available at [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/) on your system, then activate Kubernetes cluster (a docker desktop feature)
+- Helm. Visit [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/) and follow the installation instructions.
 ## Installation
 
 1. Add the Camunda 8 helm repository
@@ -87,7 +87,7 @@ elasticsearch:
       size: 15Gi
 ```
 
-We can adjust the values accordingly to our requirements(system memory, TLS, Ingress, etc.). See https://artifacthub.io/packages/helm/camunda/camunda-platform#parameters
+We can adjust the values accordingly to our requirements(system memory, TLS, Ingress, etc.). See [https://artifacthub.io/packages/helm/camunda/camunda-platform#parameters](https://artifacthub.io/packages/helm/camunda/camunda-platform#parameters)
 
 1. Deploy Camunda component using the `values.yaml` file downloaded previously.
 
@@ -128,7 +128,7 @@ kubectl port-forward svc/camunda8-zeebe-gateway 8088:8080 -n default
 ```
 kubectl port-forward svc/camunda8-operate  8081:80
 ```
-Then, open browser to http://localhost:8081. Use demo/demo to login
+Then, open browser to [http://localhost:8081](http://localhost:8081). Use demo/demo to login
 
  ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/operate-login.png)
 
@@ -137,7 +137,7 @@ Then, open browser to http://localhost:8081. Use demo/demo to login
 ```
 kubectl port-forward svc/camunda8-tasklist 8082:80
 ```
-Then, open browser to http://localhost:8082
+Then, open browser to [http://localhost:8082](http://localhost:8082)
 
  ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/tasklist-login.png)
 
@@ -148,3 +148,5 @@ kubectl port-forward svc/camunda8-connectors 8086:8080
 NB: `helm status camunda8` give the overview of the deployment with port-forward command.
 
 With Camunda 8 up and running in our kubernetes, we are now ready to design, deploy and manage scalable business processess, leveraging the powerful features of both platforms to build robust and efficient solutions.
+
+Thanks for reading!!
