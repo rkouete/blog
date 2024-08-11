@@ -8,7 +8,7 @@ isFeatured: true
 tags: ["Camunda", "Camunda 8", "Deployment"]
 ---
 
- ![Operate, login page](../public/images/posts/install-camunda-8-on-kubernetes-cluster/workflow-sample.png)
+ ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/workflow-sample.png)
 
 ## Introduction
 Camunda 8 is a modern platform for business process automation. It's designed to meet the demands of scalable, distributed systems and microservices architectures. See https://docs.camunda.io/docs/guides/ for more information. 
@@ -130,7 +130,7 @@ kubectl port-forward svc/camunda8-operate  8081:80
 ```
 Then, open browser to http://localhost:8081. Use demo/demo to login
 
- ![Operate, login page](../public/images/posts/install-camunda-8-on-kubernetes-cluster/operate-login.png)
+ ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/operate-login.png)
 
 ### Connecting to Tasklist
 
@@ -139,7 +139,7 @@ kubectl port-forward svc/camunda8-tasklist 8082:80
 ```
 Then, open browser to http://localhost:8082
 
- ![Operate, login page](../public/images/posts/install-camunda-8-on-kubernetes-cluster/tasklist-login.png)
+ ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/tasklist-login.png)
 
 ```
 kubectl port-forward svc/camunda8-connectors 8086:8080
