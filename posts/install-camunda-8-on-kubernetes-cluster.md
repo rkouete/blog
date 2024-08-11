@@ -2,7 +2,7 @@
 title: "Install Camunda 8 on a local Kubernetes cluster"
 date: "2024-01-20"
 topics: "Camunda"
-image: acrantophis-madagascariensis.jpg
+image: workflow-sample.jpg
 excerpt: Deploy Camunda 8 Self-Managed on K8s cluster using official Helm Charts
 isFeatured: true
 tags: ["Camunda", "Camunda 8", "Deployment"]
@@ -130,7 +130,7 @@ kubectl port-forward svc/camunda8-operate  8081:80
 ```
 Then, open browser to [http://localhost:8081](http://localhost:8081). Use demo/demo to login
 
- ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/operate-login.png)
+ ![Operate, login page](operate-login.png)
 
 ### Connecting to Tasklist
 
@@ -139,7 +139,7 @@ kubectl port-forward svc/camunda8-tasklist 8082:80
 ```
 Then, open browser to [http://localhost:8082](http://localhost:8082)
 
- ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/tasklist-login.png)
+ ![Operate, login page](tasklist-login.png)
 
 ```
 kubectl port-forward svc/camunda8-connectors 8086:8080
