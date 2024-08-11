@@ -8,10 +8,10 @@ isFeatured: true
 tags: ["Camunda", "Camunda 8", "Deployment"]
 ---
 
- ![Operate, login page](images/install-camunda-8-on-kubernetes-cluster/workflow-sample.png)
+ ![Operate, login page](workflow-sample.png)
 
 ## Introduction
-Camunda 8 is a modern platform for business process automation. It's designed to meet the demands of scalable, distributed systems and microservices architectures. See https://docs.camunda.io/docs/guides/ for more information. 
+Camunda 8 is a modern platform for business process automation. It's designed to meet the demands of scalable, distributed systems and microservices architectures. See [https://docs.camunda.io/docs/guides](https://docs.camunda.io/docs/guides/) for more information. 
 
 Camunda 8 consist of a set of components: 
 - **Zeebe** : the process engine responsible for executing workflows.
@@ -25,8 +25,8 @@ In this article, we will discuss how to setup a development environment for Camu
 ## Prerequisites
 
 - Kubernetes basics
-- Setup a Kubernetes (k8s) cluster on your local machine. Yo can install **Docker desktop** available at [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/) on your system, then activate Kubernetes cluster (a docker desktop feature)
-- Helm. Visit [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/) and follow the installation instructions.
+- Setup a Kubernetes (k8s) cluster on your local machine. You can install **Docker desktop** available at [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/) on your system and activate Kubernetes cluster (a docker desktop feature). Check your installation using ```shell kubectl cluster-info ```. 
+- Helm installed. Visit [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/) and follow the installation instructions.
 ## Installation
 
 1. Add the Camunda 8 helm repository
@@ -89,9 +89,9 @@ elasticsearch:
 
 We can adjust the values accordingly to our requirements(system memory, TLS, Ingress, etc.). See [https://artifacthub.io/packages/helm/camunda/camunda-platform#parameters](https://artifacthub.io/packages/helm/camunda/camunda-platform#parameters)
 
-1. Deploy Camunda component using the `values.yaml` file downloaded previously.
+3. Deploy Camunda component using the `values.yaml` file downloaded previously.
 
-```
+```shell
 helm install camunda8 camunda/camunda-platform -f values.yaml
 ```
 
@@ -99,7 +99,7 @@ Helm will automatically deploy the docker images of all camunda components on ou
 
 Execute `kubectl get pods` to check pods status.
 
-```
+```shell
 NAME                                      READY   STATUS    RESTARTS        AGE
 camunda8-connectors-86498765d8-bvm9w      1/1     Running   0               11m
 camunda8-elasticsearch-master-0           1/1     Running   0               11m
@@ -118,14 +118,14 @@ Now our camunda component are accessible only inside the cluster. To make them a
 
 The command below allow us to interact with zeebe from outside of cluster.
 
-```
+```shell
 kubectl port-forward svc/camunda8-zeebe-gateway 26500:26500 -n default
 kubectl port-forward svc/camunda8-zeebe-gateway 8088:8080 -n default
 ```
 
 ### Connecting to Operate
 
-```
+```shell
 kubectl port-forward svc/camunda8-operate  8081:80
 ```
 Then, open browser to [http://localhost:8081](http://localhost:8081). Use demo/demo to login
@@ -134,18 +134,18 @@ Then, open browser to [http://localhost:8081](http://localhost:8081). Use demo/d
 
 ### Connecting to Tasklist
 
-```
+```shell
 kubectl port-forward svc/camunda8-tasklist 8082:80
 ```
 Then, open browser to [http://localhost:8082](http://localhost:8082)
 
  ![Operate, login page](tasklist-login.png)
 
-```
+```shell
 kubectl port-forward svc/camunda8-connectors 8086:8080
 ```
 
-NB: `helm status camunda8` give the overview of the deployment with port-forward command.
+NB: ``` helm status camunda8 ``` give the overview of the deployment with port-forward command.
 
 With Camunda 8 up and running in our kubernetes, we are now ready to design, deploy and manage scalable business processess, leveraging the powerful features of both platforms to build robust and efficient solutions.
 
